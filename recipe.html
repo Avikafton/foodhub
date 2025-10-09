@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,32 +9,38 @@
   <link rel="stylesheet" href="css/recipe.css">
   <link rel="stylesheet" href="css/header.css">
 </head>
+
 <body>
 
-<!-- Header (samme markup, stylet af header.css) -->
-<header class="site-header">
-  <div class="brand">
-    <img src="/img/logo.png" alt="Foodhub logo" class="logo" />
-  </div>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html"><img src="/img/logo.png" alt="Foodhub logo" class="logo" /></a>
+    </div>
 
-  <nav class="nav" aria-label="Primær">
-    <a href="index.html" aria-current="page">Home</a>
-    <a href="recipe.html">Recipes</a>
-    <a href="#">About</a>
-  </nav>
+    <nav class="nav" aria-label="Primær">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="productlist.html">Recipes</a>
+      <a href="#">About</a>
+    </nav>
 
-  <form id="searchForm" class="search" role="search">
-    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none">
-      <path d="M21 21l-4.2-4.2M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    <input id="searchInput" type="search" placeholder="Search" aria-label="Search recipes" />
-    <button class="btn btn-accent" type="submit">Search</button>
-  </form>
-</header>
-<main>
-  <section id="recipeDetail"></section>
-</main>
+    <form id="searchForm" class="search" role="search">
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M21 21l-4.2-4.2M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" />
+      </svg>
+      <input id="searchInput" type="search" placeholder="Search" aria-label="Search recipes" />
+      <button class="btn btn-accent" type="submit">Search</button>
+    </form>
+  </header>
 
-<script src="js/recipe.js"></script>
+
+
+
+  <main>
+    <section id="recipeDetail"></section>
+  </main>
+
+  <script src="js/recipe.js"></script>
 </body>
+
 </html>

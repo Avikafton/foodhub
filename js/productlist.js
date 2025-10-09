@@ -7,13 +7,16 @@ async function fetchAllRecipes() {
   const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
   let all = [];
 
+  let totalLimit = 102;
   for (const letter of alphabet) {
+    if (all.length >= totalLimit) break;
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`;
     const response = await fetch(url);
     const data = await response.json();
 
     if (data.meals) {
-      all = all.concat(data.meals);
+      const remaining = totalLimit - all.length;
+      all = all.concat(data.meals.slice(0, remaining));
     }
   }
 
@@ -40,21 +43,25 @@ function displayRecipes(recipes) {
     `;
 
     card.addEventListener("click", () => {
-      window.location.href = `recipe.html?id=${meal.idMeal}`;
+      window.location.href = `recipe.html?id=${meal.idMeal}&source=mealdb`;
     });
 
     recipesContainer.appendChild(card);
   });
 }
 
-// SØGEFUNKTIONEN 
-searchInput.addEventListener("input", () => {
-  const value = searchInput.value.trim().toLowerCase();
-  const filtered = allRecipes.filter(meal =>
-    meal.strMeal.toLowerCase().includes(value)
-  );
-  displayRecipes(filtered);
-});
+// SØGEFUNKTIONEN
+if (searchInput) {
+  searchInput.addEventListener("input", () => {
+    const value = searchInput.value.trim().toLowerCase();
+    const filtered = allRecipes.filter(meal =>
+      meal.strMeal.toLowerCase().includes(value)
+    );
+    displayRecipes(filtered);
+  });
+} else {
+  console.warn('[productlist] #searchInput not found');
+}
 
 // HENT ALT VED LOAD
 fetchAllRecipes();

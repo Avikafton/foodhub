@@ -47,6 +47,12 @@ h1 {
   margin-top: 0.5rem;
 }
 
-
+.site-footer {
+  text-align: center;
+  padding: 25px 20px;
+  color: #888;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+}
 
 
