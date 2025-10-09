@@ -14,20 +14,7 @@
     min-height: 100vh;
 }
 
-.site-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.site-header h1 {
-    font-weight: 700;
-    font-size: 1.8rem;
-    color: #333;
-}
 
 .site-nav {
     display: flex;

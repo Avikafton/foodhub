@@ -9,56 +9,6 @@ body {
 
 
 
-/* --- HEADER --- */
-header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  padding: 2rem 8rem;
-  color: #333;
-}
-
-.logo {
-  max-width: 100px;
-  width: 100%;
-  height: auto;
-}
-
-#searchInput {
-  justify-self: center;
-  width: 100%;
-  max-width: 250px;
-  padding: 0.5rem 0.5rem;
-  border-radius: 15px;
-  border: solid #333;
-  font-size: 1rem;
-}
-
-#searchInput:focus {
-  outline: none; 
-  border: 3px solid #ff7817; 
-  color: #ff7817; 
-}
-
-nav {
-  justify-self: end;
-  display: flex;
-  gap: 3.5rem;
-}
-
-nav a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s;
-}
-
-nav a:hover {
-  color: #ff7817;
-}
-
-
-
 /* --- Recipe Detail --- */
 #recipeDetail {
   max-width: 900px;
