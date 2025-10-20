@@ -1,54 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="da">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FoodHub</title>
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/index.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
 </head>
+<body>
 
-<body class="index-page">
-    <header class="site-header">
-        <div class="brand">
-            <a href="index.html"><img src="/img/logo.png" alt="Foodhub logo" class="logo" /></a>
-        </div>
 
-        <nav class="nav" aria-label="Primær">
-            <a href="index.html" aria-current="page">Home</a>
-            <a href="productlist.html">Recipes</a>
-            <a href="about.html">About</a>
-        </nav>
+<header class="site-header">
+    <div class="brand">
+        <a href="index.html"><img src="img/foodhub.png" alt="Foodhub logo" class="logo"></a>
+    </div>
 
-        <form id="searchForm" class="search" role="search">
-            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <path d="M21 21l-4.2-4.2M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor"
+    <nav class="nav" aria-label="Primær">
+        <a href="index.html">Home</a>
+        <a href="productlist.html">Recipes</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <form id="searchForm" class="search" role="search">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M21 21l-4.2-4.2M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" />
-            </svg>
-            <input id="searchInput" type="search" placeholder="Search" aria-label="Search recipes" />
-            <button class="btn btn-accent" type="submit">Search</button>
-        </form>
-    </header>
+        </svg>
+        <input id="searchInput" type="search" placeholder="Search" aria-label="Search recipes" />
+        <button class="btn btn-accent" type="submit">Search</button>
+    </form>
+</header>
 
-    <section class="hero">
-        <img src="img/hero.jpg" alt="Delicious food" />
-        <h2>Discover Your Next Favorite Recipe</h2>
-        <a class="btn-explore" href="productlist.html">Explore recipes</a>
-    </section>
+   
+<section class="hero">
+    <img src="img/krydd.png" alt="Delicious food">
+    <h2>Discover Your Next Favorite Recipe</h2>
+    <a class="btn-explore" href="productlist.html">Explore recipes</a>
+</section>
 
-    <section class="filters-section">
-        <h3>We reccomend</h3>
-        <!-- Filters content here -->
-    </section>
+<section class="filters-section">
+    <h3>We recommend</h3>
+      
+</section>
 
-    <section class="recipe-grid"></section>
+<section class="recipe-grid"></section>
 
-    <footer class="site-footer">
-        <p>© 2025 FoodHub. All rights reserved.</p>
-    </footer>
-    <script src="js/index.js" defer></script>
+<footer class="site-footer">
+    <p>© 2025 FoodHub. All rights reserved.</p>
+</footer>
+
+<script src="js/index.js" defer></script>
 </body>
-
 </html>
