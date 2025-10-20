@@ -1,98 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-/* --- Basis --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-  /* her definerer vi alle variabler */
-  --space-3: 0.5rem;
-  --space-5: 1rem;
-  --space-7: 2rem;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #FCFDF2;
-  color: #333;
-  line-height: 1.6;
-  min-height: 100vh;
-  max-width: 1200px;
-  margin: 0 auto;
-
-}
-
-/* --- Header layout --- */
 .site-header {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr; /* tre kolonner */
-  align-items: center;
-  margin-bottom: var(--space-7);
-  padding: var(--space-5);
-  background: #FCFDF2;
-  border-bottom: 1px solid var(--card-border, #e5e5e5);
-}
-
-/* --- Brand / logo --- */
-.brand {
+  position: absolute; 
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-self: start;
+  justify-content: space-between;
   align-items: center;
-  font-weight: 800;
-  font-size: 1.375rem;
-  letter-spacing: -0.02em;
-  gap: 0.5rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem 2rem;
+  background: transparent; 
+  z-index: 50;
 }
 
 .logo {
   height: 80px;
+  transition: transform 0.3s ease;
 }
 
-/* --- Navigation --- */
+.logo:hover {
+  transform: scale(1.08);
+}
+
 .nav {
   display: flex;
-  justify-content: center; /* centrér indholdet i midterkolonnen */
-  gap: 1.25rem;
+  gap: 5rem;
 }
 
 .nav a {
   text-decoration: none;
-  color: #333;
-  padding: 0.5rem 0.75rem;
-  border-radius: 999px;
-  font-weight: 500;
-  transition: background 0.2s ease;
+  font-size: 1.2rem;
+  color: #FCFDF2; 
+  transition: all 0.5s ease;
 }
 
 .nav a[aria-current="page"],
 .nav a:hover {
-  background: #ff7817;
+  color: #333;
 }
 
-/* --- Search bar --- */
 .search {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  justify-self: end;
-  background: #f6f6f6;
-  border: 1px solid var(--card-border, #e5e5e5);
+  background: rgba(255,255,255,0.2);
   border-radius: 999px;
-  padding: 0.5rem 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #FCFDF2;
 }
 
 .search input {
   border: none;
   outline: none;
   background: transparent;
+  color: #fff;
   min-width: 8rem;
 }
 
 .search button {
-  background: #ff7b00;
+  background: #FF7A00;
   color: white;
   border: none;
   border-radius: 999px;
@@ -103,16 +78,5 @@ body {
 }
 
 .search button:hover {
-  background: #e76b00;
-}
-
-/* --- Mobile --- */
-@media (max-width: 600px) {
-  .site-header {
-    grid-template-columns: 1fr auto;
-    row-gap: var(--space-3);
-  }
-  .nav {
-    display: none;
-  }
+  background: #ffb26b;
 }

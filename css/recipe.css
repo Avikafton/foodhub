@@ -7,7 +7,19 @@ body {
   line-height: 1.6;
 }
 
+/* Header Image */
+.header-image {
+  width: 100vw;       
+  margin: 0;           
+  padding: 0;         
+  overflow: hidden;   
+}
 
+.header-image img {
+  width: 100%;         
+  height: auto;       
+  display: block;      
+}
 
 /* --- Recipe Detail --- */
 #recipeDetail {
@@ -77,7 +89,7 @@ body {
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.5rem 1rem;
-  background-color: #ff884d;
+  background-color:  #FF7A00;
   color: white;
   border-radius: 8px;
   text-decoration: none;
@@ -86,7 +98,7 @@ body {
 }
 
 .youtube-link:hover {
-  background-color: #ff6b1d;
+  background-color: #ffb26b;
   transform: translateY(-2px);
 }
 

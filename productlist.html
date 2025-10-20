@@ -12,39 +12,64 @@
 </head>
 
 <body>
-
   <header class="site-header">
     <div class="brand">
-      <a href="index.html"><img src="/img/logo.png" alt="Foodhub logo" class="logo" /></a>
+        <a href="index.html"><img src="img/foodhub.png" alt="Foodhub logo" class="logo"></a>
     </div>
 
     <nav class="nav" aria-label="Primær">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="productlist.html">Recipes</a>
-      <a href="#">About</a>
+        <a href="index.html">Home</a>
+        <a href="productlist.html">Recipes</a>
+        <a href="about.html">About</a>
     </nav>
 
     <form id="searchForm" class="search" role="search">
-      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <path d="M21 21l-4.2-4.2M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor"
-          stroke-width="2" stroke-linecap="round" />
-      </svg>
-      <input id="searchInput" type="search" placeholder="Search" aria-label="Search recipes" />
-      <button class="btn btn-accent" type="submit">Search</button>
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M21 21l-4.2-4.2M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <input id="searchInput" type="search" placeholder="Search" aria-label="Search recipes" />
+        <button class="btn btn-accent" type="submit">Search</button>
     </form>
   </header>
 
-
-
+  <section class="header-image">
+      <img src="img/header.png" alt="Header Image" />
+  </section>
 
   <main>
     <h1>WHAT ARE YOU CRAVING?</h1>
+
+    <div class="filter-bar">
+      <select id="filterCategory">
+        <option value="all">All Categories</option>
+      </select>
+
+      <select id="filterCuisine">
+        <option value="all">All Cuisines</option>
+      </select>
+
+      <select id="filterCookTime">
+        <option value="all" data-min="0" data-max="9999">Any Cook Time</option>
+        <option value="under30" data-min="0" data-max="30">Under 30 min</option>
+        <option value="30to60" data-min="30" data-max="60">30-60 min</option>
+        <option value="over60" data-min="60" data-max="9999">Over 60 min</option>
+      </select>
+
+      <select id="filterDifficulty">
+        <option value="all">Any Difficulty</option>
+      </select>
+    </div>
+
+    <div class="active-filters"></div>
+
     <section id="recipes"></section>
   </main>
+
   <footer class="site-footer">
     <p>© 2025 FoodHub. All rights reserved.</p>
   </footer>
+
   <script src="js/productlist.js"></script>
 </body>
-
 </html>

@@ -1,3 +1,18 @@
+/* Header Image */
+.header-image {
+  width: 100vw;       
+  margin: 0;           
+  padding: 0;         
+  overflow: hidden;   
+}
+
+.header-image img {
+  width: 100%;         
+  height: auto;       
+  display: block;      
+}
+
+
 .about {
   padding: 4rem 10%;
   color: #2c2c2c;
