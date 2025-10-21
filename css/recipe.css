@@ -82,7 +82,7 @@ body {
 }
 
 .instructions ol li {
-  margin-bottom: 1rem; /* dette gør, at der kommerer afstand og tydeligt linjeskift efter hvert punkt */
+  margin-bottom: 1rem; 
 }
 
 .youtube-link {
